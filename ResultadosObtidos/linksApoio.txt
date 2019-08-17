@@ -1,0 +1,24 @@
+model g rails
+
+https://translate.google.com.br/translate?hl=pt-BR&sl=en&u=https://railsguides.net/advanced-rails-model-generators/&prev=search
+
+https://onebitcode.com/o-guia-de-comandos-do-rails/
+
+mysql
+
+http://www.bosontreinamentos.com.br/mysql/mysql-alterar-tabelas-alter-table-e-visualizar-relacionamentos-10/
+
+https://www.devmedia.com.br/forum/listar-campos-de-uma-tabela-no-mysql/562913
+
+https://www.devmedia.com.br/primeiros-passos-no-mysql/28438
+
+https://www.digitalocean.com/community/tutorials/como-criar-um-novo-usuario-e-conceder-permissoes-no-mysql-pt
+
+criando api rest
+
+https://www.youtube.com/watch?v=EqOoElCjpNI
+https://medium.com/jaguaribetech/criando-api-rest-com-ruby-on-rails-1ed90d252831
+
+https://onebitcode.com/api-completa-rails/
+
+atom atalhos  https://gist.github.com/julianobailao/c8660155a9af759dea5dfe389b29dad4
