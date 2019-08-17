@@ -40,7 +40,7 @@ Segundo, criar o banco para a aplicação:
 		
 	create database Animes;
 			
-	passar o privilegio para o usuario desse banco, pois é 				recomendado não usar o root:
+	passar o privilegio para o usuario desse banco, pois é recomendado não usar o root:
 			
 	   CREATE USER 'dho619'@'localhost' IDENTIFIED BY 'senhamuitodificil';
 				
@@ -84,7 +84,7 @@ Quarto, criar a tabela dos Animes:
 
 	#rails g model: cria um modelo de tabela
 	#Animes: o nome da minha tabela
-	# name… : os campos e seus tipos, quando ausente o tipo, entende que é 		    string
+	# name… : os campos e seus tipos, quando ausente o tipo, entende que é string
 
 	
 		rails db:migrate #migra essa tabela para o banco de dados
@@ -107,7 +107,7 @@ Sexto, criar uma pasta dentro de Myanimes/app/controllers para o local dos méto
 	
 	 Myanimes/app/controllers/api/v1/animes_controller.rb
 
-	# api v1, foi criado apenas para controle de versão, caso tenha mais 	# versões para frente.
+	# api v1, foi criado apenas para controle de versão, caso tenha mais versões para frente.
 
 
 
@@ -115,7 +115,7 @@ Sexto, criar uma pasta dentro de Myanimes/app/controllers para o local dos méto
 
 Sétimo, criar a rota, nessa API uma rota bastara
 
-	No atom, no arquivo MyAnimes/config/routes.rb diga o caminho de onde 	esta os seus métodos get, post, etc.., da seguinte forma:
+	No atom, no arquivo MyAnimes/config/routes.rb diga o caminho de onde esta os seus métodos get, post, etc.., da seguinte forma:
 
 		Rails.application.routes.draw do
   			namespace 'api' do  			#dentro da pasta api
@@ -148,7 +148,7 @@ Nono, no mesmo arquivo, dentro da classe, vamos criar os métodos:
 		
 		def index #criando o metodo index
                     animes = Anime.order('created_at DESC');
-                    render json: {status: 'SUCCESS', message:'Animes foram 			   carregados:', data:animes},status: :ok
+                    render json: {status: 'SUCCESS', message:'Animes foram carregados:', data:animes},status: :ok
            end
 
 		
@@ -167,7 +167,7 @@ Nono, no mesmo arquivo, dentro da classe, vamos criar os métodos:
 
 		def show
           		anime = Anime.find(params[:id])
-          		render json: {status: 'SUCCESS', message:'Produto 					carregado', data:anime},status: :ok
+          		render json: {status: 'SUCCESS', message:'Produto carregado', data:anime},status: :ok
           	end
 
 		#o metodo tem que ter esse nome
@@ -185,16 +185,16 @@ Nono, no mesmo arquivo, dentro da classe, vamos criar os métodos:
 		def create
             	anime = Anime.new(anime_params)
             	if anime.save
-            		render json: {status: 'SUCCESS', message:'Anime 					Salvo', data:anime},status: :ok
+            		render json: {status: 'SUCCESS', message:'Anime Salvo', data:anime},status: :ok
   			else
-            		render json: {status: 'ERROR', message:'Anime nao 					Salvado', data:anime.erros},
+            		render json: {status: 'ERROR', message:'Anime nao Salvado', data:anime.erros},
 				status: :unprocessable_entity
             	end
            end
 		
 		#criar o método anime_params, para receber os parametros
 		#novamente o método tem que ter esse nome
-		#if e eles apenas olhando se deu certo ou não salvar, para exibir 		a mensagem
+		#if e eles apenas olhando se deu certo ou não salvar, para exibir a mensagem
 
 	
 	Método de Parâmentros
